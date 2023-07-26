@@ -5,8 +5,28 @@ let kittens = []
  * use the provided function to give the data an id
  * then add that data to the kittens list.
  * Then reset the form
+ * @typedef {{id:string, name: string, mood: string, affection: number}} Kitten
  */
 function addKitten(event) {
+  event.preventDefault()
+  let form = event.target
+  let thisKitten = {
+    id: generateId(),
+    name: form.name.value,
+    mood: "",
+    affection: 0
+  }
+
+  kitty = kittens.find(kitten => kitten.name == thisKitten.name)
+
+  if (!kitty) {
+    console.log("Kitten not found, adding kitten")
+    kittens.push(thisKitten)
+    saveKittens()
+  } else {
+    console.log("Kitten already exists")
+  }
+  form.reset()
 }
 
 /**
@@ -14,20 +34,36 @@ function addKitten(event) {
  * Saves the string to localstorage at the key kittens 
  */
 function saveKittens() {
+  window.localStorage.setItem("kittens", JSON.stringify(kittens))
+  drawKittens()
 }
 
 /**
  * Attempts to retrieve the kittens string from localstorage
  * then parses the JSON string into an array. Finally sets
  * the kittens array to the retrieved array
- */
+*/
 function loadKittens() {
+  let kittensDATA = JSON.parse(window.localStorage.getItem("kittens"))
+  if (kittensDATA) {
+    kittens = kittensDATA
+  }
 }
 
 /**
  * Draw all of the kittens to the kittens element
  */
 function drawKittens() {
+  let drawME = ""
+
+  kittens.forEach(kitten => {
+    drawME += `
+    
+    
+    `
+  })
+
+  document.getElementById("kittens").innerHTML = drawME
 }
 
 
@@ -37,6 +73,9 @@ function drawKittens() {
  * @return {Kitten}
  */
 function findKittenById(id) {
+  let index = kittens.findIndex(id)
+  console.log(`${id} @ ${index}`)
+  console.log(kittens[index])
 }
 
 
@@ -65,13 +104,16 @@ function catnip(id) {
  * @param {Kitten} kitten 
  */
 function setKittenMood(kitten) {
+
 }
 
 /**
  * Removes all of the kittens from the array
  * remember to save this change
  */
-function clearKittens(){
+function clearKittens() {
+  kittens = []
+  saveKittens()
 }
 
 /**
@@ -81,6 +123,7 @@ function clearKittens(){
 function getStarted() {
   document.getElementById("welcome").remove();
   console.log('Good Luck, Take it away')
+  drawKittens()
 }
 
 
@@ -88,7 +131,7 @@ function getStarted() {
 
 /**
  * Defines the Properties of a Kitten
- * @typedef {{id:sting, name: string, mood: string, affection: number}} Kitten
+ * @typedef {{id:string, name: string, mood: string, affection: number}} Kitten
  */
 
 
