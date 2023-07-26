@@ -15,11 +15,11 @@ The basic design and layout for this app has been mocked out and the names of th
 ## Build Suggestions
 1. Create a form used to add a Kitten
 1. Handle the form submission
-  - Prevent the page from reloading when submitting the form
-  - Pull the form data to get a new kitten and give that kitten an id
-  - Add the new kitten to the kittens array
-  - Reset the form
-  - Save the kittens list
+  a- Prevent the page from reloading when submitting the form
+  a- Pull the form data to get a new kitten and give that kitten an id
+  a- Add the new kitten to the kittens array
+  a- Reset the form
+  a- Save the kittens list
   - Draw the kittens list
 1. Handle Page Refresh
   - Load the kittens list
