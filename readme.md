@@ -20,21 +20,21 @@ The basic design and layout for this app has been mocked out and the names of th
   a- Add the new kitten to the kittens array
   a- Reset the form
   a- Save the kittens list
-  - Draw the kittens list
+  a- Draw the kittens list
 1. Handle Page Refresh
-  - Load the kittens list
-  - Draw the kittens list
+  a- Load the kittens list
+  a- Draw the kittens list
 
 ## Requirements: 
-- [ ] Users must have a form where they enter in at minimum the name of a kitten 
-- [ ] A Kitten's name and mood must be visible for the user 
-- [ ] A custom Google Font must be added 
-- [ ] A Kitten's mood must affect visually the appearance of the kitten 
-- [ ] Add Kitten form clears when submitted 
-- [ ] Add Kitten form submission does not reload the page 
-- [ ] Kittens are stored in local storage 
-- [ ] Kittens can be deleted 
-- [ ] Kittens have at least two buttons that affect the kitten's mood in different ways 
-- [ ] Kitten's and their mood persist through page reloads 
-- [ ] Kitten's with the same name as an already present kitten cannot be added 
-- [ ] Kittens are visible when the page reloads
+a- [ ] Users must have a form where they enter in at minimum the name of a kitten 
+a- [ ] A Kitten's name and mood must be visible for the user 
+a- [ ] A custom Google Font must be added 
+a- [ ] A Kitten's mood must affect visually the appearance of the kitten 
+a- [ ] Add Kitten form clears when submitted 
+a- [ ] Add Kitten form submission does not reload the page 
+a- [ ] Kittens are stored in local storage 
+a- [ ] Kittens can be deleted 
+a- [ ] Kittens have at least two buttons that affect the kitten's mood in different ways 
+a- [ ] Kitten's and their mood persist through page reloads 
+a- [ ] Kitten's with the same name as an already present kitten cannot be added 
+a- [ ] Kittens are visible when the page reloads
