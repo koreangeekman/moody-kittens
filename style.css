@@ -7,7 +7,7 @@
   --primary-darken: #6f8639;
   --bg: #e0d9d9;
   --shadow: 2px 0 5px rgba(49, 49, 49, 0.5);
-  --corners: 0;
+  --corners: 3px;
   --text-color: #3a3838;
   --dark: #3a3838;
   --dark-lighten: #504c4c;
@@ -22,7 +22,7 @@ body{
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Kite One', sans-serif;
 }
 
 header{
@@ -39,7 +39,8 @@ footer{
 }
 
 p{
-  margin: .5em 0;
+  margin: .1em 0;
+  font-size: 2rem;
 }
 
 img{
@@ -112,6 +113,23 @@ button.btn-special:focus{
 button.btn-special:hover{
   color: var(--primary);
 }
+i.btn-special{
+  word-wrap: normal;
+  border: none;
+  width: 100px;
+  box-shadow: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+i.btn-special:after{
+  content: "PURGE";
+  margin-top: 5px;
+  font-size: 8pt;
+  color: var(--danger);
+}
 .container{
   margin: 0 .5em;
 }
@@ -136,7 +154,10 @@ button.btn-special:hover{
   filter: drop-shadow(2px 4px 6px #00ffb3);
 }
 .kitten.tolerant img{
-  filter: drop-shadow(2px 4px 6px #646464);
+  filter: drop-shadow(2px 4px 6px #ffe600);
+}
+.kitten.undetermined img{
+  filter: drop-shadow(2px 4px 6px #d1ca9f);
 }
 .kitten.angry img{
   filter: drop-shadow(2px 4px 6px #ff0000) contrast(1);

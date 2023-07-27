@@ -7,7 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Moody Kittens | CodeWorks</title>
   <link rel="shortcut icon" href="moody-logo.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kite+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -21,6 +25,7 @@
         <button class="btn-special" type="submit">
           /ᐠ｡ꞈ｡ᐟ\
         </button>
+        <i class="action fa fa-trash btn-special text-danger m-2 text-center" onclick="clearKittens()"></i>
       </div>
     </form>
 
@@ -28,24 +33,19 @@
 
   <main class="container">
 
-    <div id="welcome" class="d-flex justify-content-center">
-      <div class="card p-2 text-center w-50">
-        <img src="moody-logo.png" height="250" alt="Moody Kittens">
+    <div id="welcome" class="d-flex justify-content-center hidden">
+      <div class="card p-2 text-center justify-content-center w-50">
+        <img src="moody-logo.png" height="250" alt="Moody Kittens" />
         <div class="mt-2">
           <b class="text-center">Hello Student</b>
-          <br>
+          <br />
           <button onclick="getStarted()">Get Started</button>
         </div>
       </div>
     </div>
 
     <div class="p-2">
-      <div id="kittens" class="d-flex align-items-center flex-wrap">
-        <h4>Kaih the Magnficent</h4>
-        <div>MoodyCatMood</div>
-        <button onclick="pet(`${kitten.id}`)">PET</button>
-        <button onclick="catnip(`${kitten.id}`)">CATNIP</button>
-      </div>
+      <div id="kittens" class="d-flex align-items-center flex-wrap space-around"></div>
     </div>
 
   </main>
